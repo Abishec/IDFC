@@ -1,319 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIRST Executive Circle - Banking Strategy Presentation</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IDFC FIRST Bank CXO Strategy</title>
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  .slide {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  h1, h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1E3A8A;
+  }
+
+  h1 {
+    font-size: 2em;
+    border-bottom: 3px solid #FB923C;
+    padding-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  /* Info Cards */
+  .card {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  /* Icons and Infographics */
+  .icon, .chart, .diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+  }
+
+  /* Use placeholders for icons/graphics */
+  .placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: #D1E9FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  /* Buttons for copy */
+  .button {
+    background-color: #1E3A8A; color: #fff; padding: 10px 15px; border: none; border-radius: 8px;
+    cursor: pointer; margin-top: 20px; font-size: 1em;
+  }
+
+  /* Responsive */
+  @media(max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+    .slide {
+      padding: 20px 10px;
+    }
+  }
+</style>
 </head>
 <body>
-    <div class="presentation-container">
-        <!-- Navigation Header -->
-        <header class="presentation-header">
-            <div class="header-content">
-                <div class="brand-section">
-                    <h1 class="brand-title">IDFC FIRST Bank</h1>
-                    <span class="presentation-title">Executive Strategy Presentation</span>
-                </div>
-                <div class="navigation-section">
-                    <button class="nav-btn" id="prevBtn">← Previous</button>
-                    <span class="slide-counter" id="slideCounter">1 of 2</span>
-                    <button class="nav-btn" id="nextBtn">Next →</button>
-                </div>
-            </div>
-        </header>
 
-        <!-- Slide Container -->
-        <main class="slides-container">
-            <!-- Slide 1: Solution Overview -->
-            <div class="slide active" id="slide1">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1 class="slide-title copyable" data-copy="FIRST Executive Circle: CXO Banking Strategy">
-                            FIRST Executive Circle: CXO Banking Strategy
-                            <span class="copy-icon">📋</span>
-                        </h1>
-                        <h2 class="slide-subtitle copyable" data-copy="Transforming Premium Banking Through Executive-Focused Innovation">
-                            Transforming Premium Banking Through Executive-Focused Innovation
-                            <span class="copy-icon">📋</span>
-                        </h2>
-                    </div>
+<!-- Slide 1: Problem & Opportunity -->
+<div class="slide" id="slide1">
+<h1>Addressing Ultra-Premium CXO Banking:</h1>
+<h2>Problem & Market Opportunity</h2>
+<p>
+IDFC FIRST Bank aims to become the primary relationship for India’s top CXOs and their families. Current challenges include 
+identifying genuine high-value prospects, preventing misuse, deepening engagement, and expanding across generations.
+</p>
+<div class="card">
+<h2>Market Highlights</h2>
+<ul>
+  <li><strong>850K</strong> High-Net-Worth Individuals in India</li>
+  <li><strong>12% CAGR</strong> expected growth in HNI segment</li>
+  <li><strong>Family Banking</strong>: 3.2x relationship expansion potential</li>
+</ul>
+</div>
+<div class="icon" title="Market Opportunity">
+  <div class="placeholder">📊</div>
+</div>
 
-                    <div class="content-grid">
-                        <!-- Problem Statement -->
-                        <section class="content-section">
-                            <h3 class="section-title">Problem Statement</h3>
-                            <ul class="problem-list copyable" data-copy="• Traditional HNI acquisition lacks CXO-specific targeting
-• Generic premium banking fails to address executive pain points  
-• High customer acquisition costs with suboptimal returns
-• Limited understanding of corporate decision-maker dynamics">
-                                <li>Traditional HNI acquisition lacks CXO-specific targeting</li>
-                                <li>Generic premium banking fails to address executive pain points</li>
-                                <li>High customer acquisition costs with suboptimal returns</li>
-                                <li>Limited understanding of corporate decision-maker dynamics</li>
-                            </ul>
-                        </section>
+<h2>Our Strategy: The CXO Executive Circle</h2>
+<p>
+Target top-tier CXOs with specialized onboarding, family ecosystem development, and industry-specific solutions, leveraging IDFC’s digital strength and referral networks.
+</p>
+<button class="button" onclick="copyText('slide1')">Copy Slide 1 Content</button>
+</div>
 
-                        <!-- Market Opportunity -->
-                        <section class="content-section">
-                            <h3 class="section-title">Market Opportunity</h3>
-                            <div class="market-stats">
-                                <div class="stat-card primary copyable" data-copy="850K Total HNI Market with 12% CAGR growth">
-                                    <div class="stat-number">850K</div>
-                                    <div class="stat-label">Total HNI Market</div>
-                                    <div class="stat-growth">12% CAGR</div>
-                                </div>
-                                <div class="stat-card secondary copyable" data-copy="212K CXO Market representing ₹47.73B value">
-                                    <div class="stat-number">212K</div>
-                                    <div class="stat-label">CXO Market</div>
-                                    <div class="stat-value">₹47.73B Value</div>
-                                </div>
-                                <div class="stat-card tertiary copyable" data-copy="63.7K Addressable CXO segment for specialized banking">
-                                    <div class="stat-number">63.7K</div>
-                                    <div class="stat-label">Addressable Segment</div>
-                                    <div class="stat-desc">CXO Focused</div>
-                                </div>
-                            </div>
-                        </section>
+<!-- Slide 2: Solution & Implementation -->
+<div class="slide" id="slide2">
+<h1>Solution Framework & Impact</h1>
+<h2>4 Strategic Pillars</h2>
+<div class="card">
+<ol>
+  <li><strong>Targeted CXO Profiling:</strong> AI-driven discovery & verification</li>
+  <li><strong>Personalized RMs:</strong> CXO-specialized relationship managers</li>
+  <li><strong>Family Ecosystem:</strong> Multi-generational wealth suite</li>
+  <li><strong>Corporate Alliances:</strong> Partnerships with executive networks & firms</li>
+</ol>
+</div>
 
-                        <!-- Core Innovation -->
-                        <section class="content-section full-width">
-                            <h3 class="section-title">Core Innovation: Strategic Pillars</h3>
-                            <div class="pillars-grid">
-                                <div class="pillar-card copyable" data-copy="Executive Intelligence & Targeting: AI-powered CXO discovery and corporate mapping">
-                                    <div class="pillar-icon">🎯</div>
-                                    <h4>Executive Intelligence & Targeting</h4>
-                                    <p>AI-powered CXO discovery and corporate mapping</p>
-                                </div>
-                                <div class="pillar-card copyable" data-copy="Specialized Service Architecture: FIRST Executive tier with dedicated relationship directors">
-                                    <div class="pillar-icon">🏛️</div>
-                                    <h4>Specialized Service Architecture</h4>
-                                    <p>FIRST Executive tier with dedicated relationship directors</p>
-                                </div>
-                                <div class="pillar-card copyable" data-copy="Corporate Partnership Ecosystem: Strategic alliances with search firms and industry bodies">
-                                    <div class="pillar-icon">🤝</div>
-                                    <h4>Corporate Partnership Ecosystem</h4>
-                                    <p>Strategic alliances with search firms and industry bodies</p>
-                                </div>
-                                <div class="pillar-card copyable" data-copy="Digital Innovation Platform: Executive concierge and family financial hub">
-                                    <div class="pillar-icon">💻</div>
-                                    <h4>Digital Innovation Platform</h4>
-                                    <p>Executive concierge and family financial hub</p>
-                                </div>
-                            </div>
-                        </section>
+<h2>Implementation Timeline</h2>
+<div class="chart">
+  <div class="placeholder" title="2025 Q4">Q4 2025</div> &rarr; <div class="placeholder" title="2026 Q1">Q1 2026</div> &rarr; <div class="placeholder" title="2026 Q2">Q2 2026</div>
+</div>
+<ul>
+  <li><strong>Q4 2025:</strong> Build AI profiling system & onboard pilot CXOs</li>
+  <li><strong>Q1 2026:</strong> Expand relationship managers, establish family programs</li>
+  <li><strong>Q2 2026:</strong> Scale to 200 CXOs & launch industry-specific solutions</li>
+</ul>
 
-                        <!-- Competitive Advantage -->
-                        <section class="content-section">
-                            <h3 class="section-title">Competitive Advantage</h3>
-                            <div class="competitive-table copyable" data-copy="IDFC Executive Circle vs Competition:
-HDFC Premier: ₹50L+ TRV, General Premium
-ICICI Private: ₹1Cr+ TRV, Wealth Management  
-HSBC Premier: ₹30L+ TRV, International
-IDFC Executive Circle: ₹2-25Cr CXO, CXO Specialized">
-                                <div class="table-header">
-                                    <div>Bank</div>
-                                    <div>Target Segment</div>
-                                    <div>Specialization</div>
-                                </div>
-                                <div class="table-row">
-                                    <div>HDFC Premier</div>
-                                    <div>₹50L+ TRV</div>
-                                    <div>General Premium</div>
-                                </div>
-                                <div class="table-row">
-                                    <div>ICICI Private</div>
-                                    <div>₹1Cr+ TRV</div>
-                                    <div>Wealth Management</div>
-                                </div>
-                                <div class="table-row">
-                                    <div>HSBC Premier</div>
-                                    <div>₹30L+ TRV</div>
-                                    <div>International</div>
-                                </div>
-                                <div class="table-row highlight">
-                                    <div><strong>IDFC Executive Circle</strong></div>
-                                    <div><strong>₹2-25Cr CXO</strong></div>
-                                    <div><strong>CXO Specialized</strong></div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
+<h2>Expected Impact</h2>
+<ul>
+  <li><strong>₹200 Crores</strong> Deposits in 18 months</li>
+  <li><strong>~25,000</strong> Family relationships deepened</li>
+  <li><strong>Market Leadership</strong> in CXO premium banking</li>
+</ul>
+<button class="button" onclick="copyText('slide2')">Copy Slide 2 Content</button>
+</div>
 
-            <!-- Slide 2: Implementation & Impact -->
-            <div class="slide" id="slide2">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1 class="slide-title copyable" data-copy="Data-Verified Implementation Strategy">
-                            Data-Verified Implementation Strategy
-                            <span class="copy-icon">📋</span>
-                        </h1>
-                        <h2 class="slide-subtitle copyable" data-copy="18-Month Roadmap with Realistic Financial Projections">
-                            18-Month Roadmap with Realistic Financial Projections
-                            <span class="copy-icon">📋</span>
-                        </h2>
-                    </div>
+<script>
+function copyText(id) {
+  const content = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(content).then(() => {
+    alert('Content copied! Paste into Canva.');
+  });
+}
+</script>
 
-                    <div class="content-grid">
-                        <!-- Implementation Timeline -->
-                        <section class="content-section full-width">
-                            <h3 class="section-title">Implementation Timeline</h3>
-                            <div class="timeline copyable" data-copy="Phase 1 (1-3 months): Foundation Building - Infrastructure Development, Partnership Creation, Team Training
-Phase 2 (4-6 months): Pilot Launch - Market Testing, Program Validation, Service Refinement
-Phase 3 (7-12 months): Scaled Deployment - Geographic Expansion, Service Enhancement, Performance Monitoring
-Phase 4 (13-18 months): Optimization & Growth - Performance Optimization, Strategic Expansion, Innovation Pipeline">
-                                <div class="timeline-item">
-                                    <div class="timeline-marker">1</div>
-                                    <div class="timeline-content">
-                                        <h4>Foundation Building</h4>
-                                        <span class="timeline-period">Months 1-3</span>
-                                        <ul>
-                                            <li>Infrastructure Development</li>
-                                            <li>Partnership Creation</li>
-                                            <li>Team Training</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-marker">2</div>
-                                    <div class="timeline-content">
-                                        <h4>Pilot Launch</h4>
-                                        <span class="timeline-period">Months 4-6</span>
-                                        <ul>
-                                            <li>Market Testing</li>
-                                            <li>Program Validation</li>
-                                            <li>Service Refinement</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-marker">3</div>
-                                    <div class="timeline-content">
-                                        <h4>Scaled Deployment</h4>
-                                        <span class="timeline-period">Months 7-12</span>
-                                        <ul>
-                                            <li>Geographic Expansion</li>
-                                            <li>Service Enhancement</li>
-                                            <li>Performance Monitoring</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-marker">4</div>
-                                    <div class="timeline-content">
-                                        <h4>Optimization & Growth</h4>
-                                        <span class="timeline-period">Months 13-18</span>
-                                        <ul>
-                                            <li>Performance Optimization</li>
-                                            <li>Strategic Expansion</li>
-                                            <li>Innovation Pipeline</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Financial Projections -->
-                        <section class="content-section">
-                            <h3 class="section-title">Financial Projections</h3>
-                            <div class="financial-metrics">
-                                <div class="metric-card primary copyable" data-copy="8,000 Target CXO customers with 20,000 family relationships">
-                                    <div class="metric-number">8K</div>
-                                    <div class="metric-label">Target Customers</div>
-                                    <div class="metric-detail">20K Family Relationships</div>
-                                </div>
-                                <div class="metric-card secondary copyable" data-copy="₹200 Crores total deposit impact from CXO segment">
-                                    <div class="metric-number">₹200Cr</div>
-                                    <div class="metric-label">Deposit Impact</div>
-                                    <div class="metric-detail">Total Value</div>
-                                </div>
-                                <div class="metric-card tertiary copyable" data-copy="₹4,375 Customer Acquisition Cost with 27-month ROI">
-                                    <div class="metric-number">₹4,375</div>
-                                    <div class="metric-label">CAC per Customer</div>
-                                    <div class="metric-detail">27-month ROI</div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Success Metrics -->
-                        <section class="content-section">
-                            <h3 class="section-title">Success Metrics</h3>
-                            <div class="metrics-list copyable" data-copy="Key Performance Indicators:
-• Customer Acquisition Rate: 450+ CXOs monthly
-• Deposit per Customer: ₹2.5Cr average
-• Cross-sell Ratio: 3.2 products per CXO
-• Customer Satisfaction: 92%+ NPS target
-• Family Penetration: 2.5 accounts per CXO">
-                                <div class="kpi-grid">
-                                    <div class="kpi-item">
-                                        <div class="kpi-value">450+</div>
-                                        <div class="kpi-label">CXOs Monthly</div>
-                                    </div>
-                                    <div class="kpi-item">
-                                        <div class="kpi-value">₹2.5Cr</div>
-                                        <div class="kpi-label">Avg. Deposits</div>
-                                    </div>
-                                    <div class="kpi-item">
-                                        <div class="kpi-value">3.2</div>
-                                        <div class="kpi-label">Products/CXO</div>
-                                    </div>
-                                    <div class="kpi-item">
-                                        <div class="kpi-value">92%+</div>
-                                        <div class="kpi-label">NPS Target</div>
-                                    </div>
-                                    <div class="kpi-item">
-                                        <div class="kpi-value">2.5</div>
-                                        <div class="kpi-label">Family Accounts</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Risk Mitigation -->
-                        <section class="content-section">
-                            <h3 class="section-title">Risk Mitigation</h3>
-                            <div class="risk-cards copyable" data-copy="Risk Mitigation Strategy:
-Quality Control: Multi-tier verification and compliance systems
-Market Validation: Continuous feedback loops and performance monitoring
-Competitive Response: Agile strategy adaptation and innovation pipeline
-Operational Scaling: Phased rollout with resource optimization">
-                                <div class="risk-card">
-                                    <h4>Quality Control</h4>
-                                    <p>Multi-tier verification and compliance systems</p>
-                                </div>
-                                <div class="risk-card">
-                                    <h4>Market Validation</h4>
-                                    <p>Continuous feedback loops and performance monitoring</p>
-                                </div>
-                                <div class="risk-card">
-                                    <h4>Competitive Response</h4>
-                                    <p>Agile strategy adaptation and innovation pipeline</p>
-                                </div>
-                                <div class="risk-card">
-                                    <h4>Operational Scaling</h4>
-                                    <p>Phased rollout with resource optimization</p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer class="presentation-footer">
-            <div class="footer-content">
-                <div class="data-sources copyable" data-copy="Data Sources: Bajaj Finserv HNI Report 2024, IDFC FIRST Bank Q1 FY26 Results, Hubbis Survey 2024, TechSci Research 2024, InviteReferrals Case Study">
-                    <span class="footer-label">Data Sources:</span>
-                    Bajaj Finserv HNI Report 2024 | IDFC FIRST Bank Q1 FY26 Results | Hubbis Survey 2024 | TechSci Research 2024 | InviteReferrals Case Study
-                </div>
-                <div class="copy-notification" id="copyNotification">Copied to clipboard!</div>
-            </div>
-        </footer>
-    </div>
-
-    <script src="app.js"></script>
 </body>
 </html>
