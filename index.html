@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDFC FIRST Bank - CXO Elite Strategy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Animated Background -->
+        <div class="animated-bg">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">IDFC FIRST Bank</div>
+                    <div class="header-subtitle">Premium Banking Excellence</div>
+                </div>
+                <div class="header-title">
+                    <h1>CXO Elite Strategy</h1>
+                    <p>Visual Strategy Dashboard</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Slider Container -->
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <!-- Slide 1: FIRST CXO Elite Program -->
+                <div class="slide active" data-slide="1">
+                    <div class="slide-content">
+                        <!-- Hero Section -->
+                        <div class="hero-section">
+                            <div class="hero-title">
+                                <h2>FIRST CXO Elite Program</h2>
+                                <p>Transforming Corporate Leaders into Banking Partners</p>
+                            </div>
+                            <div class="hero-metrics">
+                                <div class="metric-card animated-counter" data-target="8000">
+                                    <div class="metric-icon">👔</div>
+                                    <div class="metric-value">0</div>
+                                    <div class="metric-label">Target CXOs</div>
+                                    <div class="metric-progress"><div class="progress-bar" data-width="85"></div></div>
+                                </div>
+                                <div class="metric-card animated-counter" data-target="25000">
+                                    <div class="metric-icon">👨‍👩‍👧‍👦</div>
+                                    <div class="metric-value">0</div>
+                                    <div class="metric-label">Family Members</div>
+                                    <div class="metric-progress"><div class="progress-bar" data-width="90"></div></div>
+                                </div>
+                                <div class="metric-card animated-counter" data-target="2800">
+                                    <div class="metric-icon">💰</div>
+                                    <div class="metric-value">0</div>
+                                    <div class="metric-label">Deposits (₹Cr)</div>
+                                    <div class="metric-progress"><div class="progress-bar" data-width="75"></div></div>
+                                </div>
+                                <div class="metric-card animated-counter" data-target="380">
+                                    <div class="metric-icon">📈</div>
+                                    <div class="metric-value">0</div>
+                                    <div class="metric-label">ROI (%)</div>
+                                    <div class="metric-progress"><div class="progress-bar" data-width="95"></div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Problem Statement Infographic -->
+                        <div class="content-section infographic-section">
+                            <h3>Problem Statement & Market Opportunity</h3>
+                            <div class="problem-grid">
+                                <div class="problem-card">
+                                    <div class="problem-chart-container" style="position: relative; height: 120px;">
+                                        <canvas id="qualityChart"></canvas>
+                                    </div>
+                                    <div class="problem-details">
+                                        <h4>Quality Profiling</h4>
+                                        <p>85% impact on identifying genuine HNI potential</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <div class="problem-chart-container" style="position: relative; height: 120px;">
+                                        <canvas id="misuseChart"></canvas>
+                                    </div>
+                                    <div class="problem-details">
+                                        <h4>Program Misuse</h4>
+                                        <p>65% impact from unqualified account sourcing</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <div class="problem-chart-container" style="position: relative; height: 120px;">
+                                        <canvas id="familyChart"></canvas>
+                                    </div>
+                                    <div class="problem-details">
+                                        <h4>Family Banking</h4>
+                                        <p>70% impact on multi-generational engagement</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <div class="problem-chart-container" style="position: relative; height: 120px;">
+                                        <canvas id="engagementChart"></canvas>
+                                    </div>
+                                    <div class="problem-details">
+                                        <h4>Primary Banking</h4>
+                                        <p>60% impact on relationship conversion</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Target Personas with Visual Cards -->
+                        <div class="content-section">
+                            <h3>Target Personas & Market Potential</h3>
+                            <div class="personas-grid">
+                                <div class="persona-card">
+                                    <div class="persona-icon">🏢</div>
+                                    <h4>Corporate CXOs</h4>
+                                    <div class="persona-stats">
+                                        <div class="stat">
+                                            <span class="stat-number">50,000+</span>
+                                            <span class="stat-label">Prospects</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-number">₹15-40 Cr</span>
+                                            <span class="stat-label">Potential</span>
+                                        </div>
+                                    </div>
+                                    <div class="persona-chart-container" style="position: relative; height: 150px;">
+                                        <canvas id="corporateChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="persona-card">
+                                    <div class="persona-icon">🚀</div>
+                                    <h4>Startup Founders</h4>
+                                    <div class="persona-stats">
+                                        <div class="stat">
+                                            <span class="stat-number">25,000+</span>
+                                            <span class="stat-label">Prospects</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-number">₹8-25 Cr</span>
+                                            <span class="stat-label">Potential</span>
+                                        </div>
+                                    </div>
+                                    <div class="persona-chart-container" style="position: relative; height: 150px;">
+                                        <canvas id="startupChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="persona-card">
+                                    <div class="persona-icon">💼</div>
+                                    <h4>Business Promoters</h4>
+                                    <div class="persona-stats">
+                                        <div class="stat">
+                                            <span class="stat-number">35,000+</span>
+                                            <span class="stat-label">Prospects</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-number">₹12-35 Cr</span>
+                                            <span class="stat-label">Potential</span>
+                                        </div>
+                                    </div>
+                                    <div class="persona-chart-container" style="position: relative; height: 150px;">
+                                        <canvas id="businessChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4-Stage Methodology Flow -->
+                        <div class="content-section">
+                            <h3>4-Stage Strategic Methodology</h3>
+                            <div class="methodology-flow">
+                                <div class="stage-card stage-1">
+                                    <div class="stage-number">1</div>
+                                    <div class="stage-content">
+                                        <h4>ACQUISITION</h4>
+                                        <p>Corporate tie-ups & startup partnerships</p>
+                                        <div class="stage-duration">3 months</div>
+                                    </div>
+                                    <div class="stage-connector"></div>
+                                </div>
+                                <div class="stage-card stage-2">
+                                    <div class="stage-number">2</div>
+                                    <div class="stage-content">
+                                        <h4>ONBOARDING</h4>
+                                        <p>Personalized setup & RM support</p>
+                                        <div class="stage-duration">2 months</div>
+                                    </div>
+                                    <div class="stage-connector"></div>
+                                </div>
+                                <div class="stage-card stage-3">
+                                    <div class="stage-number">3</div>
+                                    <div class="stage-content">
+                                        <h4>RETENTION</h4>
+                                        <p>Family-centric relationship building</p>
+                                        <div class="stage-duration">6 months</div>
+                                    </div>
+                                    <div class="stage-connector"></div>
+                                </div>
+                                <div class="stage-card stage-4">
+                                    <div class="stage-number">4</div>
+                                    <div class="stage-content">
+                                        <h4>ENGAGEMENT</h4>
+                                        <p>AI-driven monitoring & interventions</p>
+                                        <div class="stage-duration">Ongoing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acquisition Funnel Chart -->
+                        <div class="content-section">
+                            <h3>Customer Acquisition Funnel</h3>
+                            <div class="chart-container" style="position: relative; height: 400px;">
+                                <canvas id="acquisitionFunnelChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Capabilities Showcase -->
+                        <div class="content-section">
+                            <h3>Innovation Capabilities</h3>
+                            <div class="capabilities-grid">
+                                <div class="capability-card">
+                                    <div class="capability-icon">🤖</div>
+                                    <h4>AI/ML Platform</h4>
+                                    <div class="capability-gauge">
+                                        <div class="gauge-container" style="position: relative; height: 120px;">
+                                            <canvas id="aiGauge"></canvas>
+                                        </div>
+                                        <div class="gauge-label">90% Ready</div>
+                                    </div>
+                                    <p>Advanced analytics and recommendation systems</p>
+                                </div>
+                                <div class="capability-card">
+                                    <div class="capability-icon">📱</div>
+                                    <h4>Digital Infrastructure</h4>
+                                    <div class="capability-gauge">
+                                        <div class="gauge-container" style="position: relative; height: 120px;">
+                                            <canvas id="digitalGauge"></canvas>
+                                        </div>
+                                        <div class="gauge-label">95% Ready</div>
+                                    </div>
+                                    <p>250+ mobile app features and personalization</p>
+                                </div>
+                                <div class="capability-card">
+                                    <div class="capability-icon">🤝</div>
+                                    <h4>Partnership Network</h4>
+                                    <div class="capability-gauge">
+                                        <div class="gauge-container" style="position: relative; height: 120px;">
+                                            <canvas id="partnershipGauge"></canvas>
+                                        </div>
+                                        <div class="gauge-label">75% Ready</div>
+                                    </div>
+                                    <p>Corporate and startup ecosystem connections</p>
+                                </div>
+                                <div class="capability-card">
+                                    <div class="capability-icon">🔒</div>
+                                    <h4>Risk Management</h4>
+                                    <div class="capability-gauge">
+                                        <div class="gauge-container" style="position: relative; height: 120px;">
+                                            <canvas id="riskGauge"></canvas>
+                                        </div>
+                                        <div class="gauge-label">85% Ready</div>
+                                    </div>
+                                    <p>Quality verification and monitoring frameworks</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: FIRST Family Ecosystem -->
+                <div class="slide" data-slide="2">
+                    <div class="slide-content">
+                        <!-- Hero Section -->
+                        <div class="hero-section">
+                            <div class="hero-title">
+                                <h2>FIRST Family Ecosystem</h2>
+                                <p>Retention & Engagement Creative Excellence</p>
+                            </div>
+                        </div>
+
+                        <!-- Family Tree Visualization -->
+                        <div class="content-section">
+                            <h3>Multi-Generational Banking Architecture</h3>
+                            <div class="family-tree">
+                                <div class="generation-tier legacy">
+                                    <div class="family-member">
+                                        <div class="member-icon">👴👵</div>
+                                        <h4>Legacy Generation</h4>
+                                        <div class="services-list">
+                                            <span class="service">Estate Planning</span>
+                                            <span class="service">Succession Advisory</span>
+                                            <span class="service">Legacy Management</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="generation-tier primary">
+                                    <div class="family-member primary-member">
+                                        <div class="member-icon">👔</div>
+                                        <h4>CXO/Founder</h4>
+                                        <div class="services-list">
+                                            <span class="service primary">Premium Banking</span>
+                                            <span class="service primary">Investment Advisory</span>
+                                            <span class="service primary">Corporate Services</span>
+                                        </div>
+                                    </div>
+                                    <div class="family-member">
+                                        <div class="member-icon">👩‍💼</div>
+                                        <h4>Spouse</h4>
+                                        <div class="services-list">
+                                            <span class="service">Wealth Management</span>
+                                            <span class="service">Lifestyle Banking</span>
+                                            <span class="service">Investment Planning</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="generation-tier next">
+                                    <div class="family-member">
+                                        <div class="member-icon">👨‍🎓👩‍🎓</div>
+                                        <h4>Next Generation</h4>
+                                        <div class="services-list">
+                                            <span class="service">Education Financing</span>
+                                            <span class="service">Career Planning</span>
+                                            <span class="service">Early Banking</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Engagement Metrics Dashboard -->
+                        <div class="content-section">
+                            <h3>Real-Time Engagement Dashboard</h3>
+                            <div class="dashboard-grid">
+                                <div class="dashboard-card">
+                                    <div class="dashboard-header">
+                                        <h4>Active Usage</h4>
+                                        <div class="status-badge exceeding">Exceeding</div>
+                                    </div>
+                                    <div class="metric-display">
+                                        <div class="metric-chart-container" style="position: relative; height: 150px;">
+                                            <canvas id="usageGauge"></canvas>
+                                        </div>
+                                        <div class="metric-details">
+                                            <span class="current">92%</span>
+                                            <span class="target">Target: 90%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="dashboard-header">
+                                        <h4>Family Participation</h4>
+                                        <div class="status-badge exceeding">Exceeding</div>
+                                    </div>
+                                    <div class="metric-display">
+                                        <div class="metric-chart-container" style="position: relative; height: 150px;">
+                                            <canvas id="participationGauge"></canvas>
+                                        </div>
+                                        <div class="metric-details">
+                                            <span class="current">88%</span>
+                                            <span class="target">Target: 85%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="dashboard-header">
+                                        <h4>Service Utilization</h4>
+                                        <div class="status-badge exceeding">Exceeding</div>
+                                    </div>
+                                    <div class="metric-display">
+                                        <div class="metric-chart-container" style="position: relative; height: 150px;">
+                                            <canvas id="utilizationGauge"></canvas>
+                                        </div>
+                                        <div class="metric-details">
+                                            <span class="current">85%</span>
+                                            <span class="target">Target: 80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="dashboard-header">
+                                        <h4>Satisfaction Score</h4>
+                                        <div class="status-badge exceeding">Exceeding</div>
+                                    </div>
+                                    <div class="metric-display">
+                                        <div class="metric-chart-container" style="position: relative; height: 150px;">
+                                            <canvas id="satisfactionGauge"></canvas>
+                                        </div>
+                                        <div class="metric-details">
+                                            <span class="current">94%</span>
+                                            <span class="target">Target: 90%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI Features Showcase -->
+                        <div class="content-section">
+                            <h3>AI-Driven Monitoring & Intelligence</h3>
+                            <div class="ai-features-grid">
+                                <div class="ai-feature-card">
+                                    <div class="feature-header">
+                                        <div class="feature-icon">🎯</div>
+                                        <h4>Engagement Score</h4>
+                                        <div class="accuracy-badge">95% Accuracy</div>
+                                    </div>
+                                    <p>Real-time behavioral analysis and predictive scoring</p>
+                                    <div class="feature-chart-container" style="position: relative; height: 120px;">
+                                        <canvas id="engagementScoreChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="ai-feature-card">
+                                    <div class="feature-header">
+                                        <div class="feature-icon">⚠️</div>
+                                        <h4>Early Warning</h4>
+                                        <div class="accuracy-badge">88% Accuracy</div>
+                                    </div>
+                                    <p>Predictive risk detection and intervention alerts</p>
+                                    <div class="feature-chart-container" style="position: relative; height: 120px;">
+                                        <canvas id="warningChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="ai-feature-card">
+                                    <div class="feature-header">
+                                        <div class="feature-icon">💡</div>
+                                        <h4>Opportunity Detection</h4>
+                                        <div class="accuracy-badge">92% Accuracy</div>
+                                    </div>
+                                    <p>Cross-sell identification and recommendation engine</p>
+                                    <div class="feature-chart-container" style="position: relative; height: 120px;">
+                                        <canvas id="opportunityChart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="ai-feature-card">
+                                    <div class="feature-header">
+                                        <div class="feature-icon">🕸️</div>
+                                        <h4>Relationship Mapping</h4>
+                                        <div class="accuracy-badge">90% Accuracy</div>
+                                    </div>
+                                    <p>Family network analysis and connection insights</p>
+                                    <div class="feature-chart-container" style="position: relative; height: 120px;">
+                                        <canvas id="mappingChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Revenue Growth Visualization -->
+                        <div class="content-section">
+                            <h3>Projected Revenue Growth</h3>
+                            <div class="chart-container" style="position: relative; height: 400px;">
+                                <canvas id="revenueGrowthChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Competitive Advantage Radar -->
+                        <div class="content-section">
+                            <h3>Competitive Advantage Analysis</h3>
+                            <div class="competitive-analysis">
+                                <div class="chart-container" style="position: relative; height: 400px;">
+                                    <canvas id="competitiveRadarChart"></canvas>
+                                </div>
+                                <div class="competitive-insights">
+                                    <div class="insight-card">
+                                        <h4>Innovation Leadership</h4>
+                                        <div class="advantage-score">+25 points</div>
+                                        <p>Leading market in technological innovation</p>
+                                    </div>
+                                    <div class="insight-card">
+                                        <h4>Family-Centric Approach</h4>
+                                        <div class="advantage-score">+38 points</div>
+                                        <p>Unique generational banking methodology</p>
+                                    </div>
+                                    <div class="insight-card">
+                                        <h4>Quality Control</h4>
+                                        <div class="advantage-score">+27 points</div>
+                                        <p>Superior risk management and verification</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Implementation Resource Allocation -->
+                        <div class="content-section">
+                            <h3>Implementation Resource Allocation</h3>
+                            <div class="resource-grid">
+                                <div class="resource-card">
+                                    <h4>Technology</h4>
+                                    <div class="resource-chart-container" style="position: relative; height: 150px;">
+                                        <canvas id="techResourceChart"></canvas>
+                                    </div>
+                                    <div class="resource-details">
+                                        <div class="detail">Budget: ₹60 Cr</div>
+                                        <div class="detail">Timeline: 6 months</div>
+                                        <div class="detail">Resources: 25 experts</div>
+                                    </div>
+                                </div>
+                                <div class="resource-card">
+                                    <h4>Operations</h4>
+                                    <div class="resource-chart-container" style="position: relative; height: 150px;">
+                                        <canvas id="opsResourceChart"></canvas>
+                                    </div>
+                                    <div class="resource-details">
+                                        <div class="detail">Budget: ₹40 Cr</div>
+                                        <div class="detail">Timeline: 4 months</div>
+                                        <div class="detail">Resources: 100 staff</div>
+                                    </div>
+                                </div>
+                                <div class="resource-card">
+                                    <h4>Partnerships</h4>
+                                    <div class="resource-chart-container" style="position: relative; height: 150px;">
+                                        <canvas id="partnerResourceChart"></canvas>
+                                    </div>
+                                    <div class="resource-details">
+                                        <div class="detail">Budget: ₹35 Cr</div>
+                                        <div class="detail">Timeline: 3 months</div>
+                                        <div class="detail">Resources: 15 managers</div>
+                                    </div>
+                                </div>
+                                <div class="resource-card">
+                                    <h4>Marketing</h4>
+                                    <div class="resource-chart-container" style="position: relative; height: 150px;">
+                                        <canvas id="marketingResourceChart"></canvas>
+                                    </div>
+                                    <div class="resource-details">
+                                        <div class="detail">Budget: ₹75 Cr</div>
+                                        <div class="detail">Timeline: 12 months</div>
+                                        <div class="detail">Resources: 30 specialists</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="slider-controls">
+                <button class="nav-btn prev-btn" id="prevBtn">
+                    <span>‹</span>
+                </button>
+                <div class="slide-indicators">
+                    <div class="indicator active" data-slide="1"></div>
+                    <div class="indicator" data-slide="2"></div>
+                </div>
+                <button class="nav-btn next-btn" id="nextBtn">
+                    <span>›</span>
+                </button>
+            </div>
+
+            <!-- Slide Counter -->
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">2</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
